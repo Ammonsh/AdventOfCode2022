@@ -21,21 +21,19 @@ fn main() {
         // loop through split and enumerate
         for (i, s) in split.enumerate() {
             let split2 = s.split("-");
-            // assign split to i and i+1 as int32
             arr[i*2] = split2.clone().nth(0).unwrap().parse::<i32>().unwrap();
             arr[i*2 + 1] = split2.clone().nth(1).unwrap().parse::<i32>().unwrap();
         }
         
-        // Check if pair 1 is in range of pair 2
+        // Check if pair 1 is in range of pair 2 or vise versa
         if arr[0] <= arr[2] && arr[1] >= arr[3] || arr[2] <= arr[0] && arr[3] >= arr[1]{
             total_pairs_in_range += 1;
         }
 
-        // Check if pair 1 overlaps pair 2
+        // Check if pair 1 overlaps pair 2 or vise versa
         if arr[1] >= arr[2] && arr[0] <= arr[3] || arr[3] >= arr[0] && arr[2] <= arr[1]{
             overlapping_pairs += 1;
         }
-
 
     }
 

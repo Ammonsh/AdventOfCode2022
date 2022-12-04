@@ -70,5 +70,5 @@ Program output:
 ```
 Part 1: 595
 Part 2: 952
-Ran for 2 miliseconds
+Ran for 1 miliseconds
 ```
